@@ -16,7 +16,7 @@ const fetchArticleDetails = async (id) => {
 };
 
 const ArticleDetails = async ({id}) => {
-  const article = await fetchArticleDetails(id);
+  const data = await fetchArticleDetails(id);
   // Fonction pour formater la date
   const formatDate = (dateString) => {
     const options = { year: "numeric", month: "short", day: "numeric" };
@@ -65,24 +65,23 @@ const ArticleDetails = async ({id}) => {
   };
 
   return (
-    <>
     <div className={styles.articleDetailsContainer}>
-      {article ? (
+      {data.article ? (
         <div>
           <div className={styles.timeInfo}>
-            <p className={styles.date}>{formatDate(article.publishedAt)}</p>
+            <p className={styles.date}>{formatDate(data.article.publishedAt)}</p>
             <div className={styles.middleDot}></div>
             <p className={styles.readTime}>
-              {calculateReadTime(article.content)} min de lecture
+              {calculateReadTime(data.article.content)} min de lecture
             </p>
           </div>
-          <p className={styles.articleTitle}>{article.title}</p>
-          <p className={styles.articleSubtitle}>{article.subtitle}</p>
-          <ImageComponent imageBuffer={article.image} />
+          <p className={styles.articleTitle}>{data.article.title}</p>
+          <p className={styles.articleSubtitle}>{data.article.subtitle}</p>
+          <ImageComponent imageBuffer={data.article.image} />
 
           <div className={styles.articleContent}>
             {" "}
-            {transformToHeading(article.content)}
+            {transformToHeading(data.article.content)}
           </div>
         </div>
       ) : (
