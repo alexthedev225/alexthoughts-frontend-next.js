@@ -1,4 +1,4 @@
-import ArticleDetails from '../../../components/ArticleDetails';
+import ArticleDetails from './ArticleDetails';
 import React from 'react';
 
 const Page = ({params}) => {

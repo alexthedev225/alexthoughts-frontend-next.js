@@ -1,5 +1,5 @@
 import { apiUrl } from "@/config/api";
-import styles from "../scss/ArticleDetails.module.scss";
+import styles from "../../../scss/ArticleDetails.module.scss";
 
 const fetchArticleDetails = async (id) => {
   try {

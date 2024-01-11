@@ -1,11 +1,12 @@
 
-import ArticleDetails from '@/app/components/ArticleDetails';
+// import ArticleDetails from '@/app/mon-blog/articles/[id]/ArticleDetails';
 import React from 'react';
 
 const Page = ({params}) => {
     const id = params.id
     return (
-       <ArticleDetails id={id}/>
+        <p></p>
+    //    <ArticleDetails id={id}/>
     );
 }
 

@@ -43,7 +43,7 @@ const SportArticleList = async () => {
         {filterByCategory("Sport").map((article) => (
           <li key={article._id} className={styles.articleListItem}>
             <Link
-              href={`articles/${article._id}`}
+              href={`/mon-blog/articles/${article._id}`}
               className={styles.articleLink}
             >
               <ImageComponent imageBuffer={article.image} />
