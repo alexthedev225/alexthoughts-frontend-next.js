@@ -8,7 +8,7 @@ import {
   faCheckCircle,
   faExclamationCircle,
 } from "@fortawesome/free-solid-svg-icons";
-import { localApiUrl } from "@/config/api";
+import { apiUrl } from "@/config/api";
 
 const ContactForm = forwardRef(function ContactForm(props, ref) {
   const [submitting, setSubmitting] = useState(false);
@@ -42,7 +42,7 @@ const ContactForm = forwardRef(function ContactForm(props, ref) {
     try {
       setSubmitting(true); // Active le spinner
 
-      const response = await fetch(`${localApiUrl}/api/contact/send-email`, {
+      const response = await fetch(`${apiUrl}/api/contact/send-email`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

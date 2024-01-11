@@ -4,6 +4,7 @@ import ArticleRecentComponent from './components/ArticleRecent';
 const Page = () => {
   return (
     <div>
+      
       <ArticleRecentComponent/>
     </div>
   );

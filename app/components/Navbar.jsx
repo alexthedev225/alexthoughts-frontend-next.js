@@ -41,7 +41,7 @@ const NavbarComponent = ({ onClick }) => {
           <Link href="/" onClick={toggleMenu}>
             Accueil
           </Link>
-          <Link href="/à-propos" onClick={toggleMenu}>
+          <Link href="/a-propos" onClick={toggleMenu}>
             À propos
           </Link>
           <Link href="/mon-blog" onClick={toggleMenu}>
@@ -60,7 +60,7 @@ const NavbarComponent = ({ onClick }) => {
       <div className={styles.navbarContainer}>
         <div className={styles.navigationLinks}>
           <Link href="/">Accueil</Link>
-          <Link href="/à-propos">À propos</Link>
+          <Link href="/a-propos">À propos</Link>
           <Link href="/mon-blog">Mon blog</Link>
           <button onClick={onClick} className={styles.contactLink}>
             Contact
