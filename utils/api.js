@@ -3,9 +3,7 @@ import { apiUrl } from "@/config/api";
 // api.js
 export default async function fetchData () {
     try {
-      const response = await fetch(`${apiUrl}/api/articles`,{
-        cache: "no-store"
-      });
+      const response = await fetch(`${apiUrl}/api/articles`);
       const result = await response.json();
       return result;
     } catch (error) {
