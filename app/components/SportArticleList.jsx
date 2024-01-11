@@ -1,12 +1,9 @@
-
 import Link from "next/link";
 import styles from "../scss/CategorieArticleList.module.scss"; // Assure-toi d'ajuster le chemin selon l'emplacement de ton fichier CSS module.
 import fetchData from "../../utils/api";
 
-
 const SportArticleList = async () => {
-
-   const data = await fetchData();
+  const data = await fetchData();
 
   // Filtrer les articles par catégorie
   const filterByCategory = (category) => {
@@ -35,19 +32,21 @@ const SportArticleList = async () => {
       "base64"
     )}`;
 
-    return <img className={styles.articleImage} src={dataURL} alt="article image" />;
+    return (
+      <img className={styles.articleImage} src={dataURL} alt="article image" />
+    );
   };
-  
+
   return (
     <div className={styles.articleListContainer}>
       <ul className={styles.articleList}>
         {filterByCategory("Sport").map((article) => (
           <li key={article._id} className={styles.articleListItem}>
             <Link
-             href={`/mon-blog/articles/${article._id}`}
+              href={`articles/${article._id}`}
               className={styles.articleLink}
             >
-             <ImageComponent imageBuffer={article.image} />
+              <ImageComponent imageBuffer={article.image} />
               <div className={styles.articleInfoContainer}>
                 <div className={styles.timeInfo}>
                   <p className={styles.date}>

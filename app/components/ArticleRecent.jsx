@@ -1,7 +1,6 @@
 import React from "react";
 import styles from "../scss/ArticleRecent.module.scss";
 import Link from "next/link";
-
 import { Inter } from 'next/font/google'
 import {apiUrl} from "@/config/api";
  
