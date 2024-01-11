@@ -3,9 +3,7 @@ import styles from "../../../scss/ArticleDetails.module.scss";
 
 const fetchArticleDetails = async (id) => {
   try {
-    const response = await fetch(`${apiUrl}/api/articles/${id}`,{
-      cache: "no-store"
-    });
+    const response = await fetch(`${apiUrl}/api/articles/${id}`, { next: { revalidate: 3600 } });
     const data = await response.json();
 
     return data;
